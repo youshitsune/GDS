@@ -7,3 +7,4 @@ RUN cargo install agate
 RUN echo "# Welcome" >> index.gmi
 
 CMD ["cd /home/gemini/"]
+CMD ["export PATH=$PATH:'/root/.cargo/bin'"]
