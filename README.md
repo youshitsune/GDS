@@ -18,4 +18,11 @@ To run Docker container with it type this.
 
 # Usage for Agate
 
-For how to use agate visit this link: https://github.com/mbrubeck/agate
+When you start your docker container, see README.md file.
+To see it type.
+
+```bash
+    cat README.md
+```
+
+For additional help with agate visit this link: https://github.com/mbrubeck/agate
