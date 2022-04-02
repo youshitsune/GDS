@@ -1,10 +1,7 @@
 FROM archlinux
 
-RUN pacman -Syu --noconfirm && pacman -S cargo vim --noconfirm
-RUN mkdir /home/gemini/
-RUN cd /home/gemini/
+RUN pacman -Syu --noconfirm && pacman -S cargo vim --noconfirm 
 RUN cargo install agate
-RUN echo "# Welcome" >> index.gmi
-
-CMD ["cd /home/gemini/"]
-CMD ["export PATH=$PATH:'/root/.cargo/bin'"]
+WORKDIR /root/
+RUN echo "To start agate server: /root/.cargo/bin/agate --content path/to/content --addr [::]:1965 --addr 0.0.0.0:1965 --hostname example.com --lang en-US" >> README.md
+WORKDIR /root/
