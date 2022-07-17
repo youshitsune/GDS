@@ -18,12 +18,12 @@ To run Docker container with it type this.
 
 Then to get shell in it type this.
 ```bash
-	sudo docker exec -it <name_of_your_container> bash
+  sudo docker exec -it <name_of_your_container> bash
 ```
 
 When you get shell, type this 
 ```bash
-	/root/.cargo/bin/agate --content <path_to_content> --addr [::]:1965 --addr 0.0.0.0:1965 --hostname <your_domain.com> --lang en-US
+  /root/.cargo/bin/agate --content <path_to_content> --addr [::]:1965 --addr 0.0.0.0:1965 --hostname <your_domain.com> --lang en-US
 ```
 
 That's it you can now access it by using gemini client and typing in your domain.
