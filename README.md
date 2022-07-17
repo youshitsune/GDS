@@ -1,4 +1,4 @@
-# Gemini-Docker-Server
+# Gemini Docker Server
 Gemini Server made in docker image with agate
 
 # Usage
