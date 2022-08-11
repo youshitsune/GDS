@@ -1,4 +1,4 @@
-FROM archlinux
+FROM archlinux:latest
 
 RUN pacman -Syu --noconfirm && pacman -S cargo vim --noconfirm 
 RUN cargo install agate
