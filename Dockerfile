@@ -1,7 +1,10 @@
 FROM archlinux:latest
 
-RUN pacman -Syu --noconfirm && pacman -S cargo vim --noconfirm 
+RUN pacman -Syu --noconfirm && pacman -S curl cargo vim python3 --noconfirm  
 RUN cargo install agate
 WORKDIR /root/
-RUN echo "To start agate server: /root/.cargo/bin/agate --content <path_to_content> --addr [::]:1965 --addr 0.0.0.0:1965 --hostname <your_domain.com> --lang en-US" >> README.md
+RUN curl -O https://youshitsune.envs.net/start
+RUN chmod +x start
+RUN cp start /bin/
+RUN echo "To start just run start command twice." >> README.md
 WORKDIR /root/
