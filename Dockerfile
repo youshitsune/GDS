@@ -6,5 +6,5 @@ WORKDIR /root/
 RUN curl -O https://youshitsune.envs.net/start
 RUN chmod +x start
 RUN cp start /bin/
-RUN echo "To start just run start command twice." >> README.md
+RUN echo "To start just run start." >> README.md
 WORKDIR /root/
