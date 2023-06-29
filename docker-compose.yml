@@ -3,7 +3,7 @@ services:
     image: ghcr.io/youshitsune/gds:main
     ports:
       - 1965:1965
-    environement:
+    environment:
       - DOMAIN=example.org
     volumes:
       - ./content:/root/content
