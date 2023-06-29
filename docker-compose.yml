@@ -1,0 +1,10 @@
+services:
+  gemini:
+    image: ghcr.io/youshitsune/gds:main
+    ports:
+      - 1965:1965
+    environement:
+      - DOMAIN=example.org
+    volumes:
+      - ./content:/root
+    restart: always
