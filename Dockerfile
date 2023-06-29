@@ -1,11 +1,11 @@
-FROM archlinux:latest
+FROM alpine:latest
 
-RUN pacman -Syu --noconfirm && pacman -S curl cargo vim python3 python-pip --noconfirm  
+RUN apk update && apk add curl cargo python3 py3-pip
 RUN cargo install agate
-WORKDIR /root/
+WORKDIR /usr/bin/
 RUN curl -O https://youshitsune.envs.net/start
 RUN chmod +x start
+WORKDIR /root/
 RUN pip install pyyaml
-RUN cp start /bin/
 RUN echo "To start just run start." >> README.md
 WORKDIR /root/
