@@ -6,5 +6,5 @@ services:
     environement:
       - DOMAIN=example.org
     volumes:
-      - ./content:/root
+      - ./content:/root/content
     restart: always
