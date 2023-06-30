@@ -6,6 +6,6 @@ RUN cargo install agate
 RUN mkdir content
 RUN cp .cargo/bin/agate /usr/bin/
 WORKDIR /usr/bin
-RUN curl -O 192.168.1.135:8000/start
+RUN curl -O https://github.com/youshitsune/GDS/raw/main/start
 RUN chmod +x start
 ENTRYPOINT ["start"]
