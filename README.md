@@ -19,5 +19,6 @@ services:
 
 Just start it using docker-compose, and that's it.
 
+**NOTE:** Your index file should end in .gemini extension. All other files can end in .gmi or .gmni
 
-For additional help with agate visit this link: https://github.com/mbrubeck/agate
+For additional help with nemini visit this link: https://codeberg.org/pswilde/Nemini
