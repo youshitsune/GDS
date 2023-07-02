@@ -1,0 +1,14 @@
+[[listeners]]
+port = 1965
+
+[listeners.cert]
+fullchain = "/etc/nemini/certs/server,cert"
+private_key = "/etc/nemini/certs/priv.key"
+days = 365
+
+[[listeners.sites]]
+aliases = ["0.0.0.0"]
+root_dir = "/root/content"
+index = "index.gmi"
+extensions = [".xml"]
+

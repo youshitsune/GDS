@@ -1,10 +1,15 @@
 FROM alpine:latest
 
-RUN apk update && apk add wget gzip libc6-compat rust rustup cargo gcc
+RUN apk update && apk add wget git libc6-compat nimble openssl gcc musl-dev
+WORKDIR /root/
+RUN wget https://codeberg.org/pswilde/Nemini/archive/main.tar.gz
+RUN tar -xf main.tar.gz
+WORKDIR /root/nemini
+RUN nimble build -y
+RUN mkdir /etc/nemini/certs -p
+RUN cp ./nemini /usr/local/bin
+COPY nemini.toml .
 WORKDIR /usr/bin/
 COPY start .
 RUN chmod +x start
-RUN wget https://github.com/mbrubeck/agate/releases/download/v3.3.0/agate.x86_64-unknown-linux-gnu.gz -O agate.gz
-RUN gzip -d agate.gz
-RUN chmod +x agate
 ENTRYPOINT ["start"]
