@@ -9,6 +9,4 @@ days = 365
 [[listeners.sites]]
 aliases = ["0.0.0.0"]
 root_dir = "/root/content"
-index = "index.gmi"
-extensions = [".xml"]
-
+index = "index.gemini"
