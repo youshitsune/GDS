@@ -10,3 +10,4 @@ days = 365
 aliases = ["0.0.0.0"]
 root_dir = "/root/content"
 index = "index.gemini"
+extensions = [".xml", ".pdf", ".jpg", ".png"]
