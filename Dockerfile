@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.18.3
 
 RUN apk update && apk add wget git libc6-compat nimble openssl gcc musl-dev
 WORKDIR /root/
